@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-cream-light text-charcoal font-body overflow-x-hidden;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-headline font-bold;
+  }
+}
+
+@layer utilities {
+  /* Generates a solid 3px outline tracing the transparent PNG cutout */
+  .silhouette-outline {
+    filter: drop-shadow(3px 0px 0px #CD4439) 
+            drop-shadow(-3px 0px 0px #CD4439) 
+            drop-shadow(0px 3px 0px #CD4439) 
+            drop-shadow(0px -3px 0px #CD4439) 
+            drop-shadow(2px 2px 0px #CD4439) 
+            drop-shadow(-2px -2px 0px #CD4439) 
+            drop-shadow(2px -2px 0px #CD4439) 
+            drop-shadow(-2px 2px 0px #CD4439);
+  }
+  
+  .silhouette-outline-lg {
+    filter: drop-shadow(5px 0px 0px #CD4439) 
+            drop-shadow(-5px 0px 0px #CD4439) 
+            drop-shadow(0px 5px 0px #CD4439) 
+            drop-shadow(0px -5px 0px #CD4439) 
+            drop-shadow(4px 4px 0px #CD4439) 
+            drop-shadow(-4px -4px 0px #CD4439) 
+            drop-shadow(4px -4px 0px #CD4439) 
+            drop-shadow(-4px 4px 0px #CD4439);
+  }
+
+  /* Neo-brutalism style borders and shadows */
+  .brutal-shadow {
+    box-shadow: 4px 4px 0px 0px #CD4439;
+  }
+  .brutal-shadow-lg {
+    box-shadow: 8px 8px 0px 0px #CD4439;
+  }
+
+  .enhanced-image {
+    image-rendering: auto;
+    filter: contrast(1.035) saturate(1.035);
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
